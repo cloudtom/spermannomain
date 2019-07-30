@@ -13,3 +13,4 @@ for (i in category)
 {
 autoadd(category[i])
 }
+showimage()
