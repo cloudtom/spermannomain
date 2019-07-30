@@ -49,8 +49,8 @@ draw_point=function () {
     ctx.font = "16px bold 宋体";
     //设置文字位置
     if(loca.lengthendy!=0&&loca.lengthstarty!=0){
-    if((loca.lengthendy<55&&loca.lengthendx<110)||(loca.lengthstarty<55&&loca.lengthstarty<110)){
-      posi=canvas.height*3-60;
+    if((loca.lengthendy<55&&loca.lengthendx<110)||(loca.lengthstarty<55&&loca.lengthstartyx<110)){
+      posi=canvas.height*3-55;
     }else{
       posi=15;
     }
