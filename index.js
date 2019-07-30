@@ -21,7 +21,7 @@ var minl=3.7;
 var maxw=3.2;
 var minw=2.5;
 var maxs=1.8;
-var mins=1.3;
+var minq=1.3;
 var posi=15;
 draw_point=function () {
     //获取画笔
@@ -99,7 +99,7 @@ draw_point=function () {
     if(slen!=0&&wlen!=0){   
     if((slen/wlen)>maxs)
     ctx.fillStyle="#FF2D2D";
-    else if((slen/wlen)<mins)
+    else if((slen/wlen)<minq)
     ctx.fillStyle="#2894FF";
     else
     ctx.fillStyle="#7CFC00";     
