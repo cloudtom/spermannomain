@@ -30,7 +30,7 @@ var noticeimg = document.getElementById("noticeimage")
               let ctx=ncontext;
               ctx.font = "16px bold 宋体";
               ctx.fillStyle="#2894FF";
-              ctx.fillText("正常精子图片示例：",5,16);
+              ctx.fillText("正常精子图片示例：",5,30);
 
             }
 
