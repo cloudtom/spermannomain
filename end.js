@@ -20,12 +20,14 @@ var noticeimg = document.getElementById("noticeimage")
 
         window.onload = function(){
             image.src = "https://cloudtom.github.io/spermanno/sperm.jpg"
-            noticeimg.width = image.width
-            noticeimg.height = image.height
+            
 
             
             image.onload = function(){
+                noticeimg.width = image.width
+                noticeimg.height = image.height
                 ncontext.drawImage( image , 0 , 0 )
+
             }
 
 
