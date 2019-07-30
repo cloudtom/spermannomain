@@ -27,6 +27,10 @@ var noticeimg = document.getElementById("noticeimage")
                 noticeimg.width = 750
                 noticeimg.height = image.height
                 ncontext.drawImage( image , 0 , 15 )
+              let ctx=ncontext;
+              ctx.font = "16px bold 宋体";
+              ctx.fillStyle="#2894FF";
+              ctx.fillText("正常精子图片示例：",5,16);
 
             }
 
