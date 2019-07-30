@@ -13,4 +13,4 @@ for (i in category)
 {
 autoadd(category[i])
 }
-showimage()
+setTimeout(showimage(),2000)
