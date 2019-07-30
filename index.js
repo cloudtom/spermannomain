@@ -11,19 +11,3 @@ var minw=2.5;
 var maxs=1.8;
 var minq=1.3;
 var posi=15;
-var noticeimg = document.getElementById("noticeimage")
-        var ncontext = canvas.getContext("2d")
-        var image = new Image()
-
-        window.onload = function(){
-            image.src = "https://cloudtom.github.io/spermanno/sperm.jpg"
-            noticeimg.width = image.width
-            noticeimg.height = image.height
-
-            
-            image.onload = function(){
-                ncontext.drawImage( image , 0 , 0 )
-            }
-
-
-        }
