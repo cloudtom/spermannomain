@@ -17,7 +17,7 @@ for (i in category)
 {
 autoadd(category[i])
 }
-//美国西部时间20190729 19点更新
+//美国西部时间20190729 21点更新
 var maxl=4.7;
 var minl=3.7;
 var maxw=3.2;
@@ -25,87 +25,3 @@ var minw=2.5;
 var maxs=1.8;
 var minq=1.3;
 var posi=15;
-draw_point=function () {
-    //获取画笔
-    let ctx=context;
-
-    context.drawImage(canvas,0,0,canvas.width*3 , canvas.height*3)
-    //设置绘制颜色
-    
-    ctx.fillStyle="#00FFFF";
-    ctx.fillRect(loca.lengthstartx-2,loca.lengthstarty-2,4,4);    
-
-    ctx.fillStyle="#7CFC00";
-    ctx.fillRect(loca.lengthendx-2,loca.lengthendy-2,4,4);   
-    
-    ctx.fillStyle="#FF4500";
-    ctx.fillRect(loca.widthstartx-2,loca.widthstarty-2,4,4);
- 
-    ctx.fillStyle="#FFFF00";
-    ctx.fillRect(loca.widthendx-2,loca.widthendy-2,4,4);
-    
-
-    
-    
-    //设置字体样式
-    ctx.font = "16px bold 宋体";
-    //设置文字位置
-    if(loca.lengthendy!=0&&loca.lengthstarty!=0){
-    if((loca.lengthendy<55&&loca.lengthendx<110)||(loca.lengthstarty<55&&loca.lengthstartyx<110)){
-      posi=canvas.height*3-55;
-    }else{
-      posi=15;
-    }
-    }
-    if(loca.widthendy!=0&&loca.widthstarty!=0){
-      if((loca.widthendy<55&&loca.widthendx<110)||(loca.widthstarty<55&&loca.widthstartx<110)){
-      posi=canvas.height*3-60;
-      }
-    }
-    //绘制文字
-
-    if(loca.lengthendx!=0&&loca.lengthstartx!=0){
-    slen = ((Math.sqrt((loca.lengthendx-loca.lengthstartx)*(loca.lengthendx-loca.lengthstartx)+(loca.lengthendy-loca.lengthstarty)*(loca.lengthendy-loca.lengthstarty)))/12.2).toFixed(2);
-    if(slen>maxl)
-    ctx.fillStyle="#FF2D2D";
-    else if(slen<minl)
-    ctx.fillStyle="#2894FF";
-    else
-    ctx.fillStyle="#7CFC00";
-    ctx.fillText("长度:"+slen+"微米",5,posi);
-    ctx.beginPath();
-    ctx.setLineDash([5]);
-    ctx.strokeStyle="pink"
-    ctx.moveTo(loca.lengthstartx,loca.lengthstarty);
-    ctx.lineTo(loca.lengthendx,loca.lengthendy);
-    ctx.stroke();
-    s++
-    }
-    if(loca.widthendx!=0&&loca.widthstartx!=0){
-    wlen = ((Math.sqrt((loca.widthendx-loca.widthstartx)*(loca.widthendx-loca.widthstartx)+(loca.widthendy-loca.widthstarty)*(loca.widthendy-loca.widthstarty)))/12.2).toFixed(2);
-    if(wlen>maxw)
-    ctx.fillStyle="#FF2D2D";
-    else if(wlen<minw)
-    ctx.fillStyle="#2894FF";
-    else
-    ctx.fillStyle="#7CFC00";
-    ctx.fillText("宽度:"+wlen+"微米",5,posi+20);
-    ctx.beginPath();
-    ctx.setLineDash([5]);
-    ctx.strokeStyle="pink"
-    ctx.moveTo(loca.widthstartx,loca.widthstarty);
-    ctx.lineTo(loca.widthendx,loca.widthendy);
-    ctx.stroke();
-    s++
-    }
-    if(slen!=0&&wlen!=0){   
-    if((slen/wlen)>maxs)
-    ctx.fillStyle="#FF2D2D";
-    else if((slen/wlen)<minq)
-    ctx.fillStyle="#2894FF";
-    else
-    ctx.fillStyle="#7CFC00";     
-    ctx.fillText("长宽比:"+(slen/wlen).toFixed(3),5,posi+40);
-    drawellipse(slen,wlen)
-    }
-}
