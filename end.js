@@ -1,5 +1,6 @@
 //美国西部时间20190725 21点更新
-
+//更新程序版本号
+document.querySelector("h1").innerText="图片分类-v5.3"
 //更新自动添加分类功能
   function autoadd(aname){
   var elem=parseDom('<div onclick="classify(this,'+classlabel+')" class="cbutton">'+aname+'</div>');
