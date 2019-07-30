@@ -14,3 +14,20 @@ for (i in category)
 autoadd(category[i])
 }
 setTimeout(showimage(),2000)
+var noticeimg = document.getElementById("noticeimage")
+        var ncontext = noticeimg.getContext("2d")
+        var image = new Image()
+
+        window.onload = function(){
+            image.src = "https://cloudtom.github.io/spermanno/sperm.jpg"
+            noticeimg.width = image.width
+            noticeimg.height = image.height
+
+            
+            image.onload = function(){
+                ncontext.drawImage( image , 0 , 0 )
+            }
+
+
+        }
+
