@@ -15,6 +15,7 @@ for (i in category)
 {
 autoadd(category[i])
 }
+//美国西部时间20190729 19点更新
 var maxl=4.7;
 var minl=3.7;
 var maxw=3.2;
