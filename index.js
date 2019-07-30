@@ -27,4 +27,3 @@ var minw=2.5;
 var maxs=1.8;
 var minq=1.3;
 var posi=15;
-window.onload=setupdate()
