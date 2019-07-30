@@ -26,7 +26,7 @@ var noticeimg = document.getElementById("noticeimage")
             image.onload = function(){
                 noticeimg.width = 750
                 noticeimg.height = image.height
-                ncontext.drawImage( image , 0 , 10 )
+                ncontext.drawImage( image , 0 , 15 )
 
             }
 
