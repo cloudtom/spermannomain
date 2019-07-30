@@ -49,17 +49,16 @@ draw_point=function () {
     ctx.font = "16px bold 宋体";
     //设置文字位置
     if(loca.lengthendy!=0&&loca.lengthstarty!=0){
-    if(loca.lengthendy<55||loca.lengthstarty<55){
+    if((loca.lengthendy<55&&loca.lengthendx<110)||(loca.lengthstarty<55&&loca.lengthstarty<110)){
       posi=canvas.height*3-60;
     }else{
       posi=15;
     }
     }
     if(loca.widthendy!=0&&loca.widthstarty!=0){
-      if(loca.widthendy<55||loca.widthstarty<55){
-      }else{
-      posi=15;
-    }
+      if((loca.widthendy<55&&loca.widthendx<110)||(loca.widthstarty<55&&loca.widthstartx<110)){
+      posi=canvas.height*3-60;
+      }
     }
     //绘制文字
 
