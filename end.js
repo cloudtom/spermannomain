@@ -8,7 +8,8 @@ document.querySelector("h1").innerText="图片分类-v5.3"
   classnum[classlabel]=0
   classlabel++}
 //分类类别
-category=["正常","圆头","大头","小头","其他畸形","多个","背景","不确定","临界状态"]
+//北京时间20191105 18点更新类别
+category=["正常","其他畸形","多个","背景"]
 //添加分类
 for (i in category)
 {
